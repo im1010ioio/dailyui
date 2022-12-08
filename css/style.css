@@ -213,6 +213,7 @@ body {
   position: relative;
   margin-left: 4.5em;
   bottom: 0.6em;
+  white-space: nowrap;
 }
 .work .loader {
   position: absolute;

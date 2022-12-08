@@ -1,4 +1,16 @@
 $(function(){
+	var workSubject = [
+		"Sign Up", "Landing Page", "Landing Page (above the fold)", "Calculator", "App Icon", "User Profile", "Settings", "404 page", "Music Player", "Social Share",
+		"A", "B", "C", "D", "E", "A", "B", "C", "D", "E",
+		"A", "B", "C", "D", "E", "A", "B", "C", "D", "E",
+		"A", "B", "C", "D", "E", "A", "B", "C", "D", "E",
+		"A", "B", "C", "D", "E", "A", "B", "C", "D", "E",
+		"A", "B", "C", "D", "E", "A", "B", "C", "D", "E",
+		"A", "B", "C", "D", "E", "A", "B", "C", "D", "E",
+		"A", "B", "C", "D", "E", "A", "B", "C", "D", "E",
+		"A", "B", "C", "D", "E", "A", "B", "C", "D", "E",
+		"A", "B", "C", "D", "E", "A", "B", "C", "D", "E",
+	];
 	for (i=100 ;i>0 ; i--){
 		$(".works").append('<div class="work">' +
 								'<div class="pic" >'+
@@ -6,6 +18,7 @@ $(function(){
 								'</div>'+
 								'<div class="day">'+
 									'<p>'+i+'</p>'+
+									'<span>'+workSubject[i-1]+'</span>'+
 								'</div>'+
 								'<div class="loader">'+
 									'<div class="loader-inner cube-transition">'+
