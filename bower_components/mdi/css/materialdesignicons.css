@@ -5869,11 +5869,9 @@
 }
 
 .mdi-light {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .mdi-light.mdi-inactive {
   color: rgba(255, 255, 255, 0.3);
-}
-
-/*# sourceMappingURL=materialdesignicons.css.map */
+}/*# sourceMappingURL=materialdesignicons.css.map */
