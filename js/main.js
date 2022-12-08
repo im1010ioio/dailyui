@@ -30,21 +30,21 @@ $(function(){
 
 	});
 
-		$.ajax({url:"links.txt",
-				type: "GET", 
-				data: {},
-				cached: false,
-				dataType: "json",
-				success: function(data){
-						// console.log(data);
-						$(".user .links .facebook").append("<a href='" + data.facebook + "' target='blank'><i class='mdi mdi-facebook-box'></i></a>")
-						$(".user .links .website").append("<a href='" + data.website + "' target='blank'><i class='mdi mdi-web'></i></a>")
-						$(".user .links .dribbble").append("<a href='" + data.dribbble + "' target='blank'><i class='mdi mdi-dribbble-box'></i></a>")
-						$(".user .links .twitter").append("<a href='" + data.twitter + "' target='blank'><i class='mdi mdi-twitter-box'></i></a>")
-						$(".user .links .behance").append("<a href='" + data.behance + "' target='blank'><i class='mdi mdi-behance'></i></a>")
-						$(".user .links .linkedin").append("<a href='" + data.linkedin + "' target='blank'><i class='mdi mdi-linkedin-box'></i></a>")
-					}
-				});	
+		// $.ajax({url:"links.txt",
+		// 		type: "GET", 
+		// 		data: {},
+		// 		cached: false,
+		// 		dataType: "json",
+		// 		success: function(data){
+		// 				// console.log(data);
+		// 				$(".user .links .facebook").append("<a href='" + data.facebook + "' target='blank'><i class='mdi mdi-facebook-box'></i></a>")
+		// 				$(".user .links .website").append("<a href='" + data.website + "' target='blank'><i class='mdi mdi-web'></i></a>")
+		// 				$(".user .links .dribbble").append("<a href='" + data.dribbble + "' target='blank'><i class='mdi mdi-dribbble-box'></i></a>")
+		// 				$(".user .links .twitter").append("<a href='" + data.twitter + "' target='blank'><i class='mdi mdi-twitter-box'></i></a>")
+		// 				$(".user .links .behance").append("<a href='" + data.behance + "' target='blank'><i class='mdi mdi-behance'></i></a>")
+		// 				$(".user .links .linkedin").append("<a href='" + data.linkedin + "' target='blank'><i class='mdi mdi-linkedin-box'></i></a>")
+		// 			}
+		// 		});	
 
 
 })
