@@ -18,7 +18,7 @@ $(function(){
 
 		// 41 - 50
 		"Workout Tracker", "ToDo List", "Food/Drink Menu", "Favorites", "Info Card",
-		"A", "Activity Feed", "Coming Soon", "Notifications", "Job Listing",
+		"Invoice", "Activity Feed", "Coming Soon", "Notifications", "Job Listing",
 
 		// 51 - 60
 		"Press Page", "Daily UI logo", "Header Navigation", "Confirm Reservation", "Icon Set",
@@ -42,11 +42,13 @@ $(function(){
 	];
 	for (i=100 ;i>0 ; i--){
 		$(".works").append('<div class="work">' +
-								'<div class="pic" >'+
-									'<img src="images/day'+i+'.jpg" style="display:none">'+
+								'<div class="pic">'+
+									'<img src="images/day'+i+'.jpg" alt="Daily UI #'+i+' '+workSubject[i-1]+'" style="display:none">'+
 								'</div>'+
 								'<div class="day">'+
 									'<p>'+i+'</p>'+
+								'</div>'+
+								'<div class="subject">'+
 									'<span>'+workSubject[i-1]+'</span>'+
 								'</div>'+
 								'<div class="loader">'+

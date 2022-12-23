@@ -190,14 +190,16 @@ body {
     float: left;
   }
 }
+.work .day, .work .subject span {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
 .work .day {
   position: absolute;
   height: 60px;
   width: 60px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.2);
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   bottom: 1em;
   left: 1em;
 }
@@ -209,11 +211,10 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-.work .day span {
-  position: relative;
-  margin-left: 4.5em;
-  bottom: 0.6em;
-  white-space: nowrap;
+.work .subject {
+  position: absolute;
+  left: 5.5em;
+  bottom: 2.25em;
 }
 .work .loader {
   position: absolute;
