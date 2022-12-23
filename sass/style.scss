@@ -35,6 +35,10 @@ $mobile: (
     columns: 4, 
 );
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #000;
 }
@@ -127,7 +131,6 @@ body {
     overflow: hidden;
     &:hover .day {
         transform: scale(1.2);
-        transition: all .3s;
     }
     .pic {
         padding-top: 75%;
@@ -148,6 +151,7 @@ body {
     }
     .day, .subject, .link{
         position: absolute;
+        transition: all .3s;
     }
     .day, .subject span, .link svg {
         color: rgba(255, 255, 255, 1);
@@ -182,5 +186,24 @@ body {
         position: absolute;
         left: 50%;
         top: 50%;
+    }
+}
+
+#btnTop{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    color: #fff;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    transition: all .3s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.2);
     }
 }
