@@ -40,6 +40,9 @@ $(function(){
 		"Curated For You", "F.A.Q.", "Splash Screen", "News", "Product Tour",
 		"Currently In-Stock", "Giveaway", "Advertisement", "Categories", "Redesign Daily UI Landing Page",
 	];
+
+	feather.replace();
+	
 	for (i=100 ;i>0 ; i--){
 		$(".works").append('<div class="work">' +
 								'<div class="pic">'+
