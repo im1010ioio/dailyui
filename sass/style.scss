@@ -45,6 +45,7 @@ $main-color: #CF8DAD;
 
 
 html{
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
     @include scrollbar();
 }
