@@ -50,6 +50,23 @@ body {
     }
 }
 
+
+.link {
+    position: relative;
+    >a {
+        display: inline-block;
+        padding: 0.5em;
+        font-size: 30px;
+        color: #fff;
+
+        float: right;
+        &:hover {
+            transform: scale(1.4);
+            transition: all .3s;
+        }
+    }
+}
+
 .user {
     background: #ccc;
     position: relative;
@@ -73,51 +90,6 @@ body {
             background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
             background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-        }
-        .link {
-            position: relative;
-            >a {
-                display: inline-block;
-                padding: 0.5em;
-                font-size: 30px;
-                color: #fff;
-
-                float: right;
-                &:hover {
-                    transform: scale(1.4);
-                    transition: all .3s;
-                }
-            }
-        }
-        .website:hover {
-            > a {
-                color: #ccc;
-            }
-        }
-        .facebook:hover {
-            > a {
-                color: #3b5998;
-            }
-        }
-        .twitter:hover {
-            > a {
-                color: #4099ff;
-            }
-        }
-        .linkedin:hover {
-            > a {
-                color: #0077b5;
-            }
-        }
-        .behance:hover {
-            > a {
-                color: #053eff;
-            }
-        }
-        .dribbble:hover {
-            > a {
-                color: #ea4c89;
-            }
         }
     }
     .userpic {
@@ -152,6 +124,7 @@ body {
 
 .work {
     position: relative;
+    overflow: hidden;
     &:hover .day {
         transform: scale(1.2);
         transition: all .3s;
@@ -173,12 +146,14 @@ body {
         width: 33.33333%;
         float: left;
     }
-    .day, .subject span {
+    .day, .subject, .link{
+        position: absolute;
+    }
+    .day, .subject span, .link svg {
         color: rgba(255, 255, 255, 1);
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     }
     .day {
-        position: absolute;
         height: 60px;
         width: 60px;
         border-radius: 50%;
@@ -195,10 +170,13 @@ body {
         }
     }
     .subject {
-        position: absolute;
         left: 5.5em;
         bottom: 2.25em;
         // background-color: rgba(0, 0, 0, 0.2);
+    }
+    .link{
+        right: .5em;
+        bottom: .25em;
     }
     .loader {
         position: absolute;

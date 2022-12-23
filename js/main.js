@@ -1,5 +1,5 @@
 $(function(){
-	var workSubject = [
+	let workSubject = [
 		// 1 - 10
 		"Sign Up", "Landing Page", "Landing Page (above the fold)", "Calculator", "App Icon",
 		"User Profile", "Settings", "404 page", "Music Player", "Social Share",
@@ -41,8 +41,131 @@ $(function(){
 		"Currently In-Stock", "Giveaway", "Advertisement", "Categories", "Redesign Daily UI Landing Page",
 	];
 
+
+	let figmaLinks = [
+		// 1
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+
+		// 10
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+
+		// 20
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+
+		// 30
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+
+		// 40
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+
+		// 50
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+
+		// 60
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+
+		// 70
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+
+		// 80
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+
+		// 90
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		""
+	];
+
 	feather.replace();
-	
+
 	for (i=100 ;i>0 ; i--){
 		$(".works").append('<div class="work">' +
 								'<div class="pic">'+
@@ -54,14 +177,19 @@ $(function(){
 								'<div class="subject">'+
 									'<span>'+workSubject[i-1]+'</span>'+
 								'</div>'+
+								'<div class="link">'+
+									'<a href="'+figmaLinks[i-1]+'" target="blank"><i data-feather="figma"></i>'+
+								'</div>'+
 								'<div class="loader">'+
 									'<div class="loader-inner cube-transition">'+
 										'<div></div>'+
 									'</div>'+
 								'</div>'+
 							'</div>');
-
+		feather.replace();
 	}
+
+	$('a[href=""]').hide();
 
 	$(".pic img").load(function(){
 			// console.log($(this).attr("src"));
