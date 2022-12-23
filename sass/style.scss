@@ -8,35 +8,45 @@
     margin-right: 0;
 }
 
+$scrollbar-width: 10px;
+$main-color: #CF8DAD;
 
-// Screen
-// ======
-$base-font-size: 16px;
-$base-line-height: 24px;
-$susy: ( 
-    columns: 12, 
-    gutters: 0, 
-    flow: ltr, 
-    math: fluid, 
-    output: float, 
-    gutter-position: 
-    after, globe-box-sizeing: 
-    border-box, 
-    last-flow: to, 
-    debug: (image: hide), 
-);
-$desktop: ( 
-    columns: 12,
-);
-$pad: ( 
-    columns: 4, 
-);
-$mobile: ( 
-    columns: 4, 
-);
+@mixin scrollbar( $background:     #eee,
+                  $default-color:  $main-color,
+                  $hover-color:    darken($main-color, 5%),
+                  $width:          $scrollbar-width,
+                  $height:         $scrollbar-width,
+                  $border-radius:  $scrollbar-width,
+                  $y:     auto,    $x:      hidden) {
+                      
+    overflow-y: $y;   overflow-x: $x;
+
+    // for FireFox
+    scrollbar-width: auto;
+    scrollbar-color: $default-color $background; 
+
+    &::-webkit-scrollbar {  width: $width; height: $height;  }
+    &::-webkit-scrollbar, &::-webkit-scrollbar-track{  background-color: $background;  }
+    &::-webkit-scrollbar-thumb {
+        background-color: $default-color;
+        border-radius: $border-radius;
+    }
+    &:hover {
+        // for FireFox
+        scrollbar-color: $hover-color $background;
+        
+        &::-webkit-scrollbar-thumb {
+            border-radius: $border-radius;
+            background-color: $hover-color;
+        }
+    }
+}
+
+
 
 html{
     scroll-behavior: smooth;
+    @include scrollbar();
 }
 
 body {
